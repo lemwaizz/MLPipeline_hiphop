@@ -11,4 +11,4 @@ matplotlib
 seaborn
 streamlit
 locust
-
+python-multipart
