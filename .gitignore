@@ -1,0 +1,54 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg-info/
+.env
+.venv
+venv/
+ENV/
+env/
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+*.ipynb_convert
+
+# ---- Virtual environment folders ----
+/venv/
+/env/
+/.venv/
+/.conda/
+
+# ---- Data & Model Artifacts ----
+data/raw/
+data/tmp_uploads/
+data/retrain_uploads/
+models/*.pkl
+models/*.h5
+models/*.tf
+models/*.joblib
+
+# But keep these if they exist:
+!data/processed/
+!models/model_metadata.pkl
+
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ---- Logs ----
+*.log
+
+# ---- Build / Packaging ----
+build/
+dist/
+*.egg-info/
+
+# ---- Streamlit caches ----
+.streamlit/
+

@@ -44,12 +44,16 @@ async def predict_audio(file: UploadFile = File(...)):
     if not file.filename.lower().endswith((".mp3", ".wav", ".flac")):
         raise HTTPException(status_code=400, detail="Please upload an audio file (.mp3/.wav/.flac).")
 
-    temp_path = Path("/tmp") / file.filename
+    uploads_dir = DATA_DIR / "tmp_uploads"
+    uploads_dir.mkdir(parents=True, exist_ok=True)
+
+    temp_path = uploads_dir / file.filename
     with open(temp_path, "wb") as f:
         f.write(await file.read())
 
     result = predict_audio_era(temp_path)
     return result
+
 
 
 @app.post("/upload-training-data")
