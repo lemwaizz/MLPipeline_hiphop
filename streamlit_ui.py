@@ -8,7 +8,7 @@ from pathlib import Path
 from src.preprocessing import PROCESSED_DATA_DIR
 from src.model import train_best_model
 
-API_BASE = "http://localhost:8000"  # adjust when deployed
+API_BASE = API_BASE = "https://mlpipeline-hiphop.onrender.com"
 
 st.set_page_config(page_title="Hip-Hop Era Classifier", layout="wide")
 
